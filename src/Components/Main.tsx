@@ -7,6 +7,7 @@ export interface IHelloWorldProps {
 }
 
 export function Main (props: IHelloWorldProps) {
+    console.log('props',props)
     return (
     <h1>
         Sütikuckó
