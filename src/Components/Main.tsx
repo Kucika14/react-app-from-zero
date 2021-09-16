@@ -1,5 +1,5 @@
 import React from "react"
-// import styles from './main.css'
+import styles from './main.css'
 
 export interface IHelloWorldProps {
     userName: string
@@ -11,7 +11,7 @@ export function Main (props: IHelloWorldProps) {
     return (
     <h1>
         Sütikuckó
-        <div className="topcontainerbg"></div>
+        <div className={styles.topcontainerbg}></div>
     </h1>
   ) }
 

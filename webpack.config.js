@@ -15,20 +15,6 @@ module.exports = {
     extensions: [".js", ".jsx", ".json", ".ts", ".tsx"],
   },
 	module: {
-		// https://webpack.js.org/configuration/module/#rule
-		/* rules: [
-			{
-				test: /\.?js$/,
-				exclude: /node_modules/,
-				use: {
-					loader: "babel-loader",
-					options: {
-						// https://babeljs.io/docs/en/presets/
-						presets: ['@babel/preset-env', '@babel/preset-react']
-					}
-				}
-			},
-		] */
 		rules: [
       {
         test: /\.(ts|tsx)$/,
@@ -40,8 +26,31 @@ module.exports = {
         loader: "source-map-loader",
       },
 	  {
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        test: /\.css$/,
+		exclude: [ /node_modules/ ],
+		use: [
+			// https://github.com/webpack-contrib/style-loader
+			// https://github.com/webpack-contrib/mini-css-extract-plugin
+			'style-loader',
+			{
+			  // https://github.com/webpack-contrib/css-loader
+			  loader: 'css-loader',
+
+			  // https://github.com/webpack-contrib/css-loader#options
+			  options: {
+				import: true, // Lehessen css fájlokon belül importálni, amik require-re alakulnak át.
+				modules: {
+				  localIdentName: 'hash:base64',
+				  exportLocalsConvention: 'camelCase' // https://github.com/webpack-contrib/css-loader#exportlocalsconvention
+				},
+				importLoaders: 1 // https://github.com/webpack-contrib/css-loader#importloaders
+			  }
+			},
+			{
+			  // https://github.com/postcss/postcss-loader
+			  loader: 'postcss-loader'
+			}
+		  ],
       },
     ],
 	},
@@ -50,9 +59,9 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template:path.join(__dirname, "src", "components", "index.html"),
 		}),
-    new MiniCssExtractPlugin({
-      filename: "./src/main.css",
-    }),
+		new MiniCssExtractPlugin({
+		filename: "./src/main.css",
+		}),
 	],
 	// https://webpack.js.org/configuration/mode/
 	mode: 'development',
