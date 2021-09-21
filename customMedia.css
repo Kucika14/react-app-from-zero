@@ -1,0 +1,30 @@
+/* stylelint-disable at-rule-empty-line-before */
+
+/*
+Ezzel a fájllal nincs semmi dolgunk, a webpack húzza be a postcss-en keresztül, hogy tudjuk használni az alábbi syntax-ot:
+
+@media (--sm-viewport)
+
+*/
+
+/* Mobile first */
+@custom-media --xs-viewport (min-width: 384px);
+@custom-media --sm-viewport (min-width: 576px);
+@custom-media --md-viewport (min-width: 768px);
+@custom-media --lg-viewport (min-width: 992px);
+@custom-media --xl-viewport (min-width: 1200px);
+@custom-media --xxl-viewport (min-width: 1680px);
+@custom-media --xxxl-viewport (min-width: 1921px);
+
+/* NEM mobile first, lehetőleg ne használd, csak végszükségben! */
+@custom-media --xs-only (max-width: 575px);
+@custom-media --sm-only (min-width: 576px) and (max-width: 767px);
+@custom-media --md-only (min-width: 768px) and (max-width: 991px);
+@custom-media --lg-only (min-width: 992px) and (max-width: 1199px);
+@custom-media --xl-only (min-width: 1200px) and (max-width: 1679px);
+@custom-media --xxl-only (min-width: 1680px) and (max-width: 1920px);
+@custom-media --xxxl-only (min-width: 1921px);
+
+/* Orientation */
+@custom-media --landscape (orientation: landscape);
+@custom-media --portrait (orientation: portrait);

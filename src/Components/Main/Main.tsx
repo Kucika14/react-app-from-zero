@@ -14,6 +14,7 @@ export function Main (props: IHelloWorldProps) {
     <h1>
         Sütikuckó
         <div className={styles.topContainerBg}></div>
+        <div className={styles.topContainerBg2}></div>
     </h1>
   ) }
 

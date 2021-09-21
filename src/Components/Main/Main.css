@@ -3,10 +3,16 @@ h1 {
     height: 300px;
 
 
+    & .top-container-bg {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+    }
+
+    & .top-container-bg-2 {
+        width: 200px;
+        height: 200px;
+        background-color: rgba(20, 204, 30, 0.712);
+    }
 }
 
-.top-container-bg {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-}
