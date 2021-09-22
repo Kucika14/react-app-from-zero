@@ -60,7 +60,7 @@ plugins: [
 		template:path.join(__dirname, "src",  "index.html"),
 	}),
 	new MiniCssExtractPlugin({
-		filename: "./src/Components/Main.css",
+		filename: "./src/Main.css",
 	}),
 ],
 // https://webpack.js.org/configuration/mode/
