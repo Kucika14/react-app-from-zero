@@ -1,7 +1,7 @@
+/* eslint-disable no-undef */
 // https://eslint.org/docs/user-guide/configuring/configuration-files
 
 const path = require('path')
-
 
 module.exports = {
   // 'off'   or 0 - turn the rule off
@@ -78,7 +78,7 @@ module.exports = {
         ...require('./rules/jsdoc'),
         ...require('./rules/webcomponents'),
         ...require('./rules/import'),
-        //...(developer.eslint.useSlowRules ? {} : require('./rules/slow'))
+        // ...(developer.eslint.useSlowRules ? {} : require('./rules/slow'))
         ...require('./rules/slow')
       }
     },
