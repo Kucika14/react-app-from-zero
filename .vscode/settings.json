@@ -1,0 +1,52 @@
+{
+  "window.zoomLevel": 0,
+  "files.exclude": {
+    "node_modules": true
+  },
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "editor.quickSuggestionsDelay": 1000,
+  "editor.codeActionsOnSave": {
+    // For ESLint
+    "source.fixAll.eslint": true,
+    // For TSLint
+    // "source.fixAll.tslint": true,
+    // For Stylelint
+    "source.fixAll.stylelint": true
+  },
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "typescript.suggest.autoImports": false,
+  "stylelint.syntax": "scss",
+  "stylelint.validate": [ "css", "scss" ],
+  "puglint.enable": true,
+  "javascript.suggest.autoImports": false,
+  "css.lint.unknownAtRules": "ignore",
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "typescript.suggest.completeJSDocs": false,
+  "docthis.inferTypesFromNames": true,
+  "docthis.enableHungarianNotationEvaluation": true,
+  "docthis.includeTypes": true,
+  "docthis.includeMemberOfOnClassMembers": false,
+  "docthis.includeTags": [
+      /*
+      "@class",
+      "@readonly",
+      "@interface",
+      "@enum",
+      "@description",
+      "@memberOf",
+      "@template",
+      "@extends",
+      "@implements",
+      "@export",
+      "@abstract",
+      "@protected",
+      "@private",
+      "@static"
+      */
+      "@returns",
+      "@param"
+  ]
+}

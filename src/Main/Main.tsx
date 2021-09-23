@@ -13,10 +13,11 @@ export function Main (props: IHelloWorldProps) {
     return (
         <Fragment>
             <h1>
-                Sütikuckó
+        Sütikuckó
                 <div className={styles.topContainerBg}></div>
-                <div className={styles.topContainerBg2}></div>
+        <div className={styles.topContainerBg2}></div>
             </h1>
         </Fragment>
-  ) }
+  )
+}
 
