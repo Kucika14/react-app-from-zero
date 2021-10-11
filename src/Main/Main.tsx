@@ -1,4 +1,5 @@
 import React from 'react'
+import { Header } from '../Components/Header/Header'
 import styles from './Main.css'
 
 export interface IHelloWorldProps {
@@ -9,18 +10,15 @@ export interface IHelloWorldProps {
 /**
  * The main structure constructed here.
  * @param {IHelloWorldProps} props Parameters.
- * @returns  {React.ReactFragment} The fragment.
+ * @returns {HTMLElement} The element.
  */
-export function Main (props: IHelloWorldProps) {
-  log('kacsa', props)
+export function Main (props: IHelloWorldProps): JSX.Element {
+    log('props', props)
     return (
-      <>
-        <h1>
-          Sütikuckó
-          <div className={ styles.topContainerBg } />
-          <div className={ styles.topContainerBg2 } />
-        </h1>
-      </>
+      <section>
+        <Header />
+      </section>
+
   )
 }
 

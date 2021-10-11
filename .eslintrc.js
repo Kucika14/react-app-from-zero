@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 // Ez az egész project fő .eslintrc fájla
 
 const config = require('./eslint/eslint.config.js')
