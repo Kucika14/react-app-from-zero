@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const path = require('path')
@@ -57,6 +57,10 @@ module.exports = {
     ]
   },
   plugins: [
+    // https://webpack.js.org/plugins/provide-plugin/
+    new webpack.ProvidePlugin({
+      log: [ path.resolve('./common/Logger/log'), 'default' ]
+    }),
     // https://webpack.js.org/plugins/html-webpack-plugin/
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'src', 'index.html')

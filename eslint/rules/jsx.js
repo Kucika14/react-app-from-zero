@@ -14,7 +14,7 @@ module.exports = {
     multiline: 'consistent',
     singleline: 'consistent'
   } ],
-  'react/jsx-fragments': [ 2, 'syntax' ],
+  'react/jsx-fragments': [ 0, 'syntax' ], // ki kell kapcsolni mert valmaiért nem tudja, hogy 17-es react van a projektben
   'react/jsx-max-depth': [ 1, { max: 5 } ],
   'react/jsx-props-no-multi-spaces': 2,
   'react/jsx-child-element-spacing': 0, // Nem kell

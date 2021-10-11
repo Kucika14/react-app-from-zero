@@ -1,4 +1,4 @@
-import type _log from './common/log'
+import type _log from './common/Logger/log'
 
 declare global {
   // for log
