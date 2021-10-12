@@ -1,6 +1,5 @@
 import React from 'react'
-import { Header } from '../Components/Header/Header'
-import styles from './Main.css'
+import Header from '../Components/Header/Header'
 
 export interface IHelloWorldProps {
     userName: string
@@ -12,13 +11,18 @@ export interface IHelloWorldProps {
  * @param {IHelloWorldProps} props Parameters.
  * @returns {HTMLElement} The element.
  */
-export function Main (props: IHelloWorldProps): JSX.Element {
+export default class Main extends React.Component {
+  public constructor (props: IHelloWorldProps) {
+    super(props)
     log('props', props)
+  }
+
+  public render (): JSX.Element {
     return (
       <section>
         <Header />
       </section>
-
-  )
+    )
+  }
 }
 

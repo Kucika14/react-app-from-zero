@@ -37,7 +37,7 @@ module.exports = {
     eventHandlerPrefix:     'on'
   } ],
   'react/jsx-indent-props': [ 2, 2 ],
-  'react/jsx-key': 0, // Nem kell.
+  'react/jsx-key': 1, // csak warning.
 
   // Sajnos ez csak vagy-vagy, tehát vagy a többsorost védjük le, mint most, vagy pedig az egy sorban lévő maximumot adjuk meg. :/
   'react/jsx-max-props-per-line': [ 2, { maximum: 1, when: 'multiline' } ],
