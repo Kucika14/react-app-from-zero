@@ -8,6 +8,7 @@
 			"removeComments": true,
 			"sourceMap": true,
 			"esModuleInterop": true,
+      "allowUmdGlobalAccess": true,
 			"target": "es5",
 			"lib": [
 				"DOM",

@@ -59,7 +59,9 @@ module.exports = {
   plugins: [
     // https://webpack.js.org/plugins/provide-plugin/
     new webpack.ProvidePlugin({
-      log: [ path.resolve('./common/Logger/log'), 'default' ]
+      log: [ path.resolve('./common/Logger/log'), 'default' ],
+      React: 'react',
+      ReactDOM: 'react-dom'
     }),
     // https://webpack.js.org/plugins/html-webpack-plugin/
     new HtmlWebpackPlugin({

@@ -1,6 +1,6 @@
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React from 'react'
+import ListElem from '../ListElem/ListElem'
 import styles from './Header.css'
 
 const NAV_ITEMS = [ 'recpies', 'about us', 'galery', 'contact', 'order' ]
@@ -17,7 +17,12 @@ public render (): JSX.Element {
       <nav className={ styles.navBox }>
         <ul className={ styles.navList }>
           { NAV_ITEMS.map((item, i) => (
-            <li className={ styles.navItem } key={ item } onClick={ this.onListElementClick } data-index={ i }>{ item }</li>
+            <ListElem
+              key={ item }
+              item={ item }
+              index={ i }
+              onClickElem={ this.onListElementClick }
+            />
         )) }
         </ul>
       </nav>
