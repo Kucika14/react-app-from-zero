@@ -7,5 +7,5 @@ const props = {
 
 ReactDOM.render(
   <Main { ...props } />,
-    document.querySelector('#root')
+  document.querySelector('#root')
 )

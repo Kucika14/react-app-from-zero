@@ -1,27 +1,18 @@
+import { useState, useRef } from 'react'
 import Header from '../Components/Header/Header'
+import Recipes from '../Components/Recipes/Recipes'
 
 export interface IHelloWorldProps {
     userName: string
     lang: string
 }
 
-/**
- * The main structure constructed here.
- * @param {IHelloWorldProps} props Parameters.
- * @returns {HTMLElement} The element.
- */
-export default class Main extends React.Component {
-  public constructor (props: IHelloWorldProps) {
-    super(props)
-    log('props', props)
-  }
-
-  public render (): JSX.Element {
+export default function Main (props: IHelloWorldProps): JSX.Element  {
     return (
       <section>
         <Header />
+        <Recipes />
       </section>
     )
-  }
 }
 
